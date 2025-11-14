@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "QuotesApi.Controllers.QuotesController",
+    "Method": "GetRandomQuote",
+    "RelativePath": "api/Quotes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
