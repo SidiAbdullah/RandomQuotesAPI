@@ -1,25 +1,30 @@
-# Use official .NET SDK image to build the app
+# ============================
+# 1) Build stage
+# ============================
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+WORKDIR /app
 
-# Copy csproj and restore dependencies
-COPY ["QuotesApi/QuotesApi.csproj", "QuotesApi/"]
-RUN dotnet restore "QuotesApi/QuotesApi.csproj"
+# Copy all project files
+COPY ./QuotesApi ./QuotesApi
 
-# Copy all source files
-COPY . .
-WORKDIR "/src/QuotesApi"
+# Restore dependencies
+RUN dotnet restore ./QuotesApi/QuotesApi.csproj
 
-# Publish the app
-RUN dotnet publish -c Release -o /app/publish
+# Build project
+RUN dotnet publish ./QuotesApi/QuotesApi.csproj -c Release -o /publish
 
-# Use ASP.NET runtime image for final container
+
+# ============================
+# 2) Runtime stage
+# ============================
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/publish .
 
-# Expose HTTP port
-EXPOSE 80
+COPY --from=build /publish .
 
-# Entry point
+# Render uses PORT environment variable
+ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
+
+EXPOSE 10000
+
 ENTRYPOINT ["dotnet", "QuotesApi.dll"]
