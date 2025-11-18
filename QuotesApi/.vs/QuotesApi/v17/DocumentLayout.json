@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|c:\\all_my_projects\\past_projects\\quotesapi\\quotesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|c:\\all_my_projects\\past_projects\\quotesapi\\quotesapi\\controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|solutionrelative:controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|c:\\all_my_projects\\past_projects\\quotesapi\\quotesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AC193B-AE2E-4B61-91BF-603151B93364}|QuotesApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -35,15 +35,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "QuotesController.cs",
               "DocumentMoniker": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\Controllers\\QuotesController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuotesController.cs",
               "ToolTip": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\Controllers\\QuotesController.cs",
               "RelativeToolTip": "Controllers\\QuotesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T15:33:44.667Z"
+              "WhenOpened": "2025-11-14T15:33:44.667Z",
+              "EditorCaption": ""
             }
           ]
         }

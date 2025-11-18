@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.IO;
 
 namespace QuotesApi.Controllers
 {
@@ -8,25 +7,29 @@ namespace QuotesApi.Controllers
     [ApiController]
     public class QuotesController : ControllerBase
     {
-        private readonly string[] quotes;
-
-        public QuotesController()
+        private readonly string[] quotes = new[]
         {
-            string filePath = Path.Combine(AppContext.BaseDirectory, "quotes.txt");
-
-            if (System.IO.File.Exists(filePath))
-            {
-                quotes = System.IO.File.ReadAllLines(filePath);
-            }
-            else
-            {
-                quotes = new string[]
-                {
-                    "Stay hungry, stay foolish.",
-                    "Success is not final; failure is not fatal."
-                };
-            }
-        }
+            "من جدّ وجد ومن زرع حصد",
+            "العلم نور والجهل ظلام",
+            "الصبر مفتاح الفرج",
+            "من طلب العلا سهر الليالي",
+            "القناعة كنز لا يفنى",
+            "التجربة خير برهان",
+            "لا تؤجل عمل اليوم إلى الغد",
+            "الوقت كالسيف إن لم تقطعه قطعك",
+            "من حفر حفرة لأخيه وقع فيها",
+            "الكلمة الطيبة صدقة",
+            "درهم وقاية خير من قنطار علاج",
+            "العقل زينة",
+            "العين لا تعلو على الحاجب",
+            "من لا يشكر الناس لا يشكر الله",
+            "أطلب العلم من المهد إلى اللحد",
+            "الرفق في كل شيء",
+            "اعمل لدنياك كأنك تعيش أبداً واعمل لآخرتك كأنك تموت غداً",
+            "خير الأمور أوسطها",
+            "من حسن إسلام المرء تركه ما لا يعنيه",
+            "الجار قبل الدار"
+        };
 
         [HttpGet]
         public IActionResult GetRandomQuote()
