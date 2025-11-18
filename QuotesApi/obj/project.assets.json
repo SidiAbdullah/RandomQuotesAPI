@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\all_my_projects\\QuotesApi\\QuotesApi.csproj",
+      "projectUniqueName": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\QuotesApi.csproj",
       "projectName": "QuotesApi",
-      "projectPath": "C:\\all_my_projects\\QuotesApi\\QuotesApi.csproj",
+      "projectPath": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\QuotesApi.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\all_my_projects\\QuotesApi\\obj\\",
+      "outputPath": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

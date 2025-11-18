@@ -10,10 +10,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-}); // me
+}); // mine
 
 var app = builder.Build();
-app.UseCors("AllowAll"); // me
+app.UseCors("AllowAll"); // mine
+
+app.Urls.Add("http://0.0.0.0:" + Environment.GetEnvironmentVariable("PORT")); // mine
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

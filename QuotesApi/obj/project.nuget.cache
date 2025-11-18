@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D96FCGzcXTo=",
+  "dgSpecHash": "teEmY1ys0Pw=",
   "success": true,
-  "projectFilePath": "C:\\all_my_projects\\QuotesApi\\QuotesApi.csproj",
+  "projectFilePath": "C:\\all_my_projects\\past_projects\\QuotesApi\\QuotesApi\\QuotesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
