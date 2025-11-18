@@ -1,0 +1,3 @@
+wwwroot\Quotes.css
+wwwroot\Quotes.html
+wwwroot\Quotes.js
