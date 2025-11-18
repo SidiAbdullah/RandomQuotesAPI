@@ -1,33 +1,39 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Add services
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-}); // mine
+    options.AddPolicy("AllowAll", p =>
+        p.AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+});
 
 var app = builder.Build();
-app.UseCors("AllowAll"); // mine
 
-app.Urls.Add("http://0.0.0.0:" + Environment.GetEnvironmentVariable("PORT")); // mine
-
-// Configure the HTTP request pipeline.
+// Swagger only in Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// IMPORTANT: Do NOT use HTTPS redirection on Render
+// app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
+// Controllers
 app.MapControllers();
+
+// Optional root endpoint (helps confirm service is online)
+app.MapGet("/", () => "Random Quotes API is running 🚀");
 
 app.Run();
